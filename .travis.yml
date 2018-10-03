@@ -14,7 +14,7 @@ addons:
 before_install:
   - sudo apt-get -qq update
   - sudo apt-get install ninja build-essential
-  - sudo pip install meson
+  - sudo pip install meson==0.42.1
   - python3 -V
 
 install:
