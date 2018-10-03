@@ -1,0 +1,25 @@
+sudo: required
+language: c
+compiler:
+  - gcc
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    - llvm-toolchain-precise
+    packages:
+    - gcc-6
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install ninja python-pip python-dev build-essential
+  - sudo pip install --upgrade pip
+  - sudo pip install meson
+
+install:
+  - if [ "$CXX" = "g++" ]; then export CXX="g++-5" CC="gcc-5"; fi
+script:
+  - mkdir build
+  - meson build
+  - cd build
+  - ninja
+  - ninja test
