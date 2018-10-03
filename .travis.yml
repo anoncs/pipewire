@@ -1,7 +1,5 @@
 sudo: required
 language: c
-python:
-  - "3.6"
 compiler:
   - gcc
 addons:
@@ -22,8 +20,7 @@ before_install:
 install:
   - if [ "$CXX" = "g++" ]; then export CXX="g++-5" CC="gcc-5"; fi
 script:
-  - mkdir build
-  - meson build
+  - meson . build
   - cd build
   - ninja
   - ninja test
