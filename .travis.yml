@@ -13,8 +13,8 @@ addons:
 before_install:
   - "sudo apt-get -qq update"
   - "sudo apt-get install ninja build-essential"
-  - "sudo pip3 install pathlib"
-  - "sudo pip3 install meson==0.42.1"
+  - "sudo python3 -m pip install pathlib"
+  - "sudo python3 -m pip install meson==0.42.1"
   - "python3 -V"
 
 install:
