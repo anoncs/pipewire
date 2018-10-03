@@ -1,4 +1,5 @@
 sudo: required
+dist: "trusty"
 language: c
 compiler:
   - gcc
@@ -6,15 +7,15 @@ env:
   - TRAVIS_PYTHON_VERSION=3.5
 addons:
     packages:
-    - gcc-6
-    - python3.5
-    - python3-pip
+    - "gcc-6"
+    - "python3.5"
+    - "python3-pip"
 before_install:
-  - sudo apt-get -qq update
-  - sudo apt-get install ninja build-essential
-  - sudo pip3 install pathlib
-  - sudo pip3 install meson==0.42.1
-  - python3 -V
+  - "sudo apt-get -qq update"
+  - "sudo apt-get install ninja build-essential"
+  - "sudo pip3 install pathlib"
+  - "sudo pip3 install meson==0.42.1"
+  - "python3 -V"
 
 install:
   - if [ "$CXX" = "g++" ]; then export CXX="g++-5" CC="gcc-5"; fi
