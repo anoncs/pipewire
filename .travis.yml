@@ -2,6 +2,8 @@ sudo: required
 language: c
 compiler:
   - gcc
+env:
+  - TRAVIS_PYTHON_VERSION=3.5
 addons:
     packages:
     - gcc-6
