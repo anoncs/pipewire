@@ -12,13 +12,12 @@ addons:
     packages:
     - gcc-6
     - python3
-    - python3-pip
+    - python-pip
 before_install:
   - sudo apt-get -qq update
   - sudo apt-get install ninja build-essential
-  - sudo pip3 install meson
+  - sudo pip install meson
   - python3 -V
-  - pip3 -V
 
 install:
   - if [ "$CXX" = "g++" ]; then export CXX="g++-5" CC="gcc-5"; fi
