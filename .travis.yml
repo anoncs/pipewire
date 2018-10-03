@@ -12,6 +12,7 @@ before_install:
   - sudo apt-get install python3
   - sudo apt-get install ninja build-essential
   - sudo pip install --upgrade pip
+  - sudo pip install pathlib
   - sudo pip install meson==0.42.1
   - python3 -V
 
