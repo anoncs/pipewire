@@ -3,10 +3,6 @@ language: c
 compiler:
   - gcc
 addons:
-  apt:
-    sources:
-    - ubuntu-toolchain-r-test
-    - llvm-toolchain-precise
     packages:
     - gcc-6
     - python3.5
