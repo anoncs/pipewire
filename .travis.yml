@@ -15,7 +15,9 @@ addons:
     - python3
     - python3-pip
     - libdbus-1-dev
-    - libasound2
+    - alsa-utils
+    - libjack-dev
+    - libpulse-dev
 before_install:
   - "sudo apt-get -qq update"
   - "sudo apt-get install ninja build-essential"
