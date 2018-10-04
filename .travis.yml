@@ -1,16 +1,6 @@
-language: c
-branches:
-  only:
-    - master
-    - work
 sudo: required
 dist: trusty
-git:
-  depth: false
-cache:
-  timeout: 1000
-  directories:
-    - build
+language: c
 services:
   - docker
 install:
