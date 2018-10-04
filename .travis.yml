@@ -3,7 +3,7 @@ dist: trusty
 language: c
 services:
   - docker
-install:
+before_install:
   - chmod +x build-ubuntu-18.04.sh
 after_success:
   - docker --version
