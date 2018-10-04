@@ -5,6 +5,4 @@ RUN if [ `arch` = "x86_64" ]; then curl -L -O http://mirrors.kernel.org/ubuntu/p
 RUN if [ `arch` = "x86_64" ]; then curl -L -O http://mirrors.kernel.org/ubuntu/pool/main/j/jackd2/libjack-jackd2-dev_1.9.12~dfsg-2_amd64.deb; dpkg -i libjack-jackd2-dev_1.9.12~dfsg-2_amd64.deb; fi
 RUN if [ `arch` = "x86_64" ]; then curl -L -O http://mirrors.kernel.org/ubuntu/pool/main/p/pulseaudio/libpulse-dev_11.1-1ubuntu7_amd64.deb; dpkg -i libpulse-dev_11.1-1ubuntu7_amd64.deb; fi
 #RUN if [ `arch` = "x86_64" ]; then curl -L -O ; dpkg -i ; fi
-COPY . /build/
-WORKDIR /build
 ENTRYPOINT ./build-ubuntu-18.04.sh
