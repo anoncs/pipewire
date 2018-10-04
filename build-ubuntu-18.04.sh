@@ -5,6 +5,7 @@ set -e
 set -vx
 
 MAKE_J=$(grep -c processor /proc/cpuinfo)
+echo "inside make"
 ./autogensh.sh
 ./configure
-make -j${MAKE_J} all
+make .
